@@ -81,11 +81,12 @@ define(function() {
       while (i <= j) {
         if (i === j && arr[i] === item)
           ++count;
-        else if (arr[i] === item)
-          ++count;
-        else if (arr[j] === item)
-          ++count;
-
+        else {
+          if (arr[i] === item)
+            ++count;
+          if (arr[j] === item)
+            ++count;
+        }
         ++i;
         --j;
       }
